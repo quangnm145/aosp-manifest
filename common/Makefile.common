@@ -1,5 +1,5 @@
 # D:/common/Makefile.common
-# Common makefile cho tất cả STM8 projects
+# Common makefile cho tất cả STM8 projects - Cross Platform
 # Include trong project Makefile của bạn: include ../../common/Makefile.common
 
 # ============================================================================
@@ -11,6 +11,29 @@
 # SRC           := main.c file1.c file2.c (default: main.c)
 # LIB_SRC_FILES := stm8s_gpio.c stm8s_clk.c stm8s_tim4.c (nếu để trống thì không compile lib)
 # ============================================================================
+
+# Phát hiện hệ điều hành
+ifeq ($(OS),Windows_NT)
+    PLATFORM := Windows
+    RM := cmd /c rmdir /s /q
+    MKDIR := cmd /c if not exist
+    MKDIR_END := mkdir
+    SHELL := cmd
+    # Fix path separator cho Windows
+    FIXPATH = $(subst /,\,$1)
+else
+    UNAME_S := $(shell uname -s)
+    ifeq ($(UNAME_S),Linux)
+        PLATFORM := Linux
+    endif
+    ifeq ($(UNAME_S),Darwin)
+        PLATFORM := macOS
+    endif
+    RM := rm -rf
+    MKDIR := mkdir -p
+    MKDIR_END :=
+    FIXPATH = $1
+endif
 
 CC        := sdcc
 PACKIHX   := packihx
@@ -59,8 +82,13 @@ OBJS         := $(patsubst %.c,$(OBJ_DIR)/%.rel,$(SRC)) $(LIB_OBJ)
 
 all: $(HEX)
 
+ifeq ($(PLATFORM),Windows)
 $(OBJ_DIR) $(OUT_DIR):
-	@mkdir -p "$@"
+	@$(MKDIR) "$(call FIXPATH,$@)" $(MKDIR_END) "$(call FIXPATH,$@)"
+else
+$(OBJ_DIR) $(OUT_DIR):
+	@$(MKDIR) "$@"
+endif
 
 $(OBJ_DIR)/%.rel: %.c | $(OBJ_DIR)
 	$(CC) -c $(CFLAGS) $< -o $@
@@ -74,14 +102,21 @@ $(IHX): $(OBJS) | $(OUT_DIR)
 $(HEX): $(IHX)
 	$(PACKIHX) $(IHX) > $(HEX)
 
+ifeq ($(PLATFORM),Windows)
 clean:
-	@rm -rf $(OBJ_DIR) $(OUT_DIR)
+	@$(RM) "$(call FIXPATH,$(OBJ_DIR))" 2>nul || echo.
+	@$(RM) "$(call FIXPATH,$(OUT_DIR))" 2>nul || echo.
+else
+clean:
+	@$(RM) $(OBJ_DIR) $(OUT_DIR)
+endif
 
 flash: $(HEX)
 	$(STM8FLASH) -c $(PROBE) -p $(MCU) -w $(HEX)
 
 info:
 	@echo "======================================"
+	@echo "Platform    : $(PLATFORM)"
 	@echo "Project     : $(PROJECT_NAME)"
 	@echo "MCU         : $(MCU)"
 	@echo "Probe       : $(PROBE)"
