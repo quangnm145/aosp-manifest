@@ -1,0 +1,328 @@
+;!FILE object/stm8s_gpio.asm
+XH3
+H B areas DD global symbols
+M stm8s_gpio
+S .__.ABS. Def000000
+A _CODE size 0 flags 0 addr 0
+A DATA size 0 flags 0 addr 0
+A INITIALIZED size 0 flags 0 addr 0
+A DABS size 0 flags 8 addr 0
+A HOME size 0 flags 0 addr 0
+A GSINIT size 0 flags 0 addr 0
+A GSFINAL size 0 flags 0 addr 0
+A CONST size 0 flags 0 addr 0
+A INITIALIZER size 0 flags 0 addr 0
+A CODE size D4 flags 0 addr 0
+S A$stm8s_gpio$64 Def000000
+S XG$GPIO_ReadOutputData$0$0 Def0000A9
+S A$stm8s_gpio$92 Def00000D
+S A$stm8s_gpio$74 Def000006
+S _GPIO_Init Def00000D
+S A$stm8s_gpio$93 Def00000F
+S A$stm8s_gpio$84 Def00000C
+S A$stm8s_gpio$75 Def000007
+S A$stm8s_gpio$94 Def000011
+S A$stm8s_gpio$67 Def000001
+S XG$GPIO_WriteHigh$0$0 Def000092
+S XG$GPIO_Write$0$0 Def000089
+S A$stm8s_gpio$78 Def000009
+S A$stm8s_gpio$97 Def000013
+S A$stm8s_gpio$79 Def00000A
+S A$stm8s_gpio$98 Def000015
+S A$stm8s_gpio$99 Def000018
+S G$GPIO_WriteReverse$0$0 Def00009F
+S G$GPIO_ReadInputPin$0$0 Def0000AD
+S _GPIO_WriteReverse Def00009F
+S G$GPIO_ExternalPullUpConfig$0$0 Def0000BA
+S C$stm8s_gpio.c$103$2_0$313 Def00004E
+S C$stm8s_gpio.c$213$1_0$331 Def0000AD
+S G$GPIO_WriteLow$0$0 Def000093
+S C$stm8s_gpio.c$112$2_0$314 Def000064
+S G$GPIO_DeInit$0$0 Def000000
+S C$stm8s_gpio.c$110$1_0$309 Def00005C
+S C$stm8s_gpio.c$231$1_0$333 Def0000C3
+S C$stm8s_gpio.c$215$1_0$331 Def0000B0
+S XG$GPIO_WriteReverse$0$0 Def0000A7
+S _GPIO_ReadInputPin Def0000AD
+S C$stm8s_gpio.c$216$1_0$331 Def0000B9
+S C$stm8s_gpio.c$170$1_0$323 Def00009E
+S C$stm8s_gpio.c$154$1_0$321 Def00008A
+S C$stm8s_gpio.c$112$1_0$309 Def000056
+S C$stm8s_gpio.c$233$1_0$333 Def0000BB
+S C$stm8s_gpio.c$131$1_0$309 Def000083
+S C$stm8s_gpio.c$225$1_0$333 Def0000BA
+S C$stm8s_gpio.c$202$1_0$329 Def0000AA
+S C$stm8s_gpio.c$156$1_0$321 Def00008D
+S C$stm8s_gpio.c$123$1_0$309 Def00006F
+S C$stm8s_gpio.c$116$2_0$315 Def000069
+S C$stm8s_gpio.c$233$2_0$334 Def0000C7
+S C$stm8s_gpio.c$180$1_0$325 Def00009F
+S C$stm8s_gpio.c$157$1_0$321 Def000092
+S C$stm8s_gpio.c$141$1_0$319 Def000088
+S C$stm8s_gpio.c$125$2_0$316 Def000077
+S C$stm8s_gpio.c$204$1_0$329 Def0000AA
+S C$stm8s_gpio.c$205$1_0$329 Def0000AC
+S C$stm8s_gpio.c$182$1_0$325 Def0000A2
+S C$stm8s_gpio.c$143$1_0$319 Def000088
+S A$stm8s_gpio$100 Def00001A
+S C$stm8s_gpio.c$238$1_0$333 Def0000D0
+S G$GPIO_ReadInputData$0$0 Def0000AA
+S C$stm8s_gpio.c$183$1_0$325 Def0000A7
+S C$stm8s_gpio.c$167$1_0$323 Def000093
+S C$stm8s_gpio.c$144$1_0$319 Def000089
+S A$stm8s_gpio$101 Def00001B
+S C$stm8s_gpio.c$236$2_0$335 Def0000CC
+S C$stm8s_gpio.c$191$1_0$327 Def0000A8
+S G$GPIO_ReadOutputData$0$0 Def0000A8
+S _GPIO_ExternalPullUpConfig Def0000BA
+S A$stm8s_gpio$210 Def000087
+S A$stm8s_gpio$201 Def00007E
+S A$stm8s_gpio$111 Def000027
+S A$stm8s_gpio$102 Def00001C
+S C$stm8s_gpio.c$169$1_0$323 Def000094
+S C$stm8s_gpio.c$129$2_0$317 Def00007E
+S A$stm8s_gpio$220 Def000088
+S A$stm8s_gpio$202 Def000080
+S A$stm8s_gpio$121 Def000031
+S A$stm8s_gpio$112 Def000029
+S A$stm8s_gpio$103 Def00001E
+S C$stm8s_gpio.c$193$1_0$327 Def0000A8
+S _GPIO_WriteLow Def000093
+S _GPIO_DeInit Def000000
+S A$stm8s_gpio$203 Def000082
+S A$stm8s_gpio$122 Def000033
+S A$stm8s_gpio$113 Def00002A
+S A$stm8s_gpio$104 Def00001F
+S C$stm8s_gpio.c$194$1_0$327 Def0000A9
+S A$stm8s_gpio$330 Def0000B0
+S A$stm8s_gpio$303 Def0000A9
+S A$stm8s_gpio$132 Def00003C
+S A$stm8s_gpio$114 Def00002B
+S A$stm8s_gpio$105 Def000021
+S XG$GPIO_ReadInputPin$0$0 Def0000B9
+S G$GPIO_WriteHigh$0$0 Def00008A
+S G$GPIO_Write$0$0 Def000088
+S A$stm8s_gpio$340 Def0000B9
+S A$stm8s_gpio$331 Def0000B2
+S A$stm8s_gpio$313 Def0000AA
+S A$stm8s_gpio$160 Def000056
+S A$stm8s_gpio$133 Def00003E
+S A$stm8s_gpio$106 Def000022
+S A$stm8s_gpio$332 Def0000B4
+S A$stm8s_gpio$260 Def000099
+S A$stm8s_gpio$242 Def000091
+S A$stm8s_gpio$233 Def00008A
+S A$stm8s_gpio$161 Def000058
+S A$stm8s_gpio$152 Def00004E
+S A$stm8s_gpio$143 Def000044
+S A$stm8s_gpio$134 Def00003F
+S A$stm8s_gpio$125 Def000034
+S A$stm8s_gpio$107 Def000024
+S A$stm8s_gpio$351 Def0000BB
+S A$stm8s_gpio$333 Def0000B5
+S A$stm8s_gpio$261 Def00009A
+S A$stm8s_gpio$234 Def00008B
+S A$stm8s_gpio$225 Def000089
+S A$stm8s_gpio$207 Def000083
+S A$stm8s_gpio$162 Def00005B
+S A$stm8s_gpio$153 Def000050
+S A$stm8s_gpio$144 Def000046
+S A$stm8s_gpio$126 Def000035
+S A$stm8s_gpio$117 Def00002D
+S A$stm8s_gpio$108 Def000026
+S A$stm8s_gpio$370 Def0000CF
+S A$stm8s_gpio$352 Def0000BE
+S A$stm8s_gpio$334 Def0000B6
+S A$stm8s_gpio$280 Def0000A2
+S A$stm8s_gpio$262 Def00009C
+S A$stm8s_gpio$253 Def000093
+S A$stm8s_gpio$208 Def000085
+S A$stm8s_gpio$190 Def000074
+S A$stm8s_gpio$172 Def000064
+S A$stm8s_gpio$154 Def000051
+S A$stm8s_gpio$145 Def000047
+S A$stm8s_gpio$127 Def000037
+S A$stm8s_gpio$118 Def00002F
+S A$stm8s_gpio$362 Def0000C7
+S A$stm8s_gpio$353 Def0000BF
+S A$stm8s_gpio$326 Def0000AD
+S A$stm8s_gpio$281 Def0000A3
+S A$stm8s_gpio$245 Def000092
+S A$stm8s_gpio$209 Def000086
+S A$stm8s_gpio$191 Def000075
+S A$stm8s_gpio$173 Def000066
+S A$stm8s_gpio$155 Def000053
+S A$stm8s_gpio$146 Def000049
+S A$stm8s_gpio$128 Def000039
+S A$stm8s_gpio$363 Def0000C9
+S A$stm8s_gpio$354 Def0000C0
+S A$stm8s_gpio$327 Def0000AE
+S A$stm8s_gpio$318 Def0000AC
+S A$stm8s_gpio$282 Def0000A5
+S A$stm8s_gpio$237 Def00008D
+S A$stm8s_gpio$183 Def00006C
+S A$stm8s_gpio$174 Def000067
+S A$stm8s_gpio$165 Def00005C
+S A$stm8s_gpio$156 Def000055
+S A$stm8s_gpio$147 Def00004B
+S A$stm8s_gpio$138 Def000041
+S A$stm8s_gpio$129 Def00003A
+S C$stm8s_gpio.c$91$3_0$311 Def00003C
+S C$stm8s_gpio.c$53$0_0$307 Def000000
+S A$stm8s_gpio$364 Def0000CA
+S A$stm8s_gpio$355 Def0000C2
+S A$stm8s_gpio$337 Def0000B7
+S A$stm8s_gpio$265 Def00009D
+S A$stm8s_gpio$256 Def000094
+S A$stm8s_gpio$238 Def00008E
+S A$stm8s_gpio$184 Def00006E
+S A$stm8s_gpio$166 Def00005D
+S A$stm8s_gpio$148 Def00004C
+S A$stm8s_gpio$139 Def000043
+S _GPIO_ReadInputData Def0000AA
+S A$stm8s_gpio$374 Def0000D0
+S A$stm8s_gpio$257 Def000095
+S A$stm8s_gpio$239 Def000090
+S A$stm8s_gpio$194 Def000077
+S A$stm8s_gpio$167 Def00005F
+S _GPIO_ReadOutputData Def0000A8
+S A$stm8s_gpio$375 Def0000D1
+S A$stm8s_gpio$348 Def0000BA
+S A$stm8s_gpio$285 Def0000A6
+S A$stm8s_gpio$276 Def00009F
+S A$stm8s_gpio$258 Def000096
+S A$stm8s_gpio$195 Def000079
+S A$stm8s_gpio$168 Def000061
+S C$stm8s_gpio.c$71$1_0$309 Def00000D
+S G$GPIO_Init$0$0 Def00000D
+S C$stm8s_gpio.c$55$1_0$307 Def000001
+S A$stm8s_gpio$376 Def0000D2
+S A$stm8s_gpio$358 Def0000C3
+S A$stm8s_gpio$277 Def0000A0
+S A$stm8s_gpio$268 Def00009E
+S A$stm8s_gpio$259 Def000098
+S A$stm8s_gpio$196 Def00007B
+S A$stm8s_gpio$187 Def00006F
+S A$stm8s_gpio$178 Def000069
+S A$stm8s_gpio$169 Def000062
+S XG$GPIO_WriteLow$0$0 Def00009E
+S C$stm8s_gpio.c$81$1_0$309 Def00006C
+S XG$GPIO_DeInit$0$0 Def00000C
+S C$stm8s_gpio.c$56$1_0$307 Def000003
+S A$stm8s_gpio$377 Def0000D3
+S A$stm8s_gpio$368 Def0000CC
+S A$stm8s_gpio$359 Def0000C5
+S A$stm8s_gpio$197 Def00007C
+S A$stm8s_gpio$188 Def000070
+S A$stm8s_gpio$179 Def00006B
+S C$stm8s_gpio.c$98$2_0$310 Def000044
+S C$stm8s_gpio.c$95$3_0$312 Def000041
+S C$stm8s_gpio.c$89$2_0$310 Def000034
+S C$stm8s_gpio.c$91$1_0$309 Def000031
+S C$stm8s_gpio.c$57$1_0$307 Def000006
+S A$stm8s_gpio$369 Def0000CD
+S A$stm8s_gpio$288 Def0000A7
+S A$stm8s_gpio$189 Def000072
+S C$stm8s_gpio.c$58$1_0$307 Def000009
+S _GPIO_WriteHigh Def00008A
+S _GPIO_Write Def000088
+S A$stm8s_gpio$298 Def0000A8
+S C$stm8s_gpio.c$59$1_0$307 Def00000C
+S C$stm8s_gpio.c$87$1_0$309 Def00002D
+S A$stm8s_gpio$70 Def000003
+S A$stm8s_gpio$71 Def000004
+S C$stm8s_gpio.c$98$1_0$309 Def000027
+S XG$GPIO_ReadInputData$0$0 Def0000AC
+A CABS size 0 flags 8 addr 0
+T 00 00 00
+R 00 00 00 09
+T 00 00 00 51 90 7F 93 6F 02 93 6F 03 93 6F 04 81
+R 00 00 00 09
+T 00 00 0D
+R 00 00 00 09
+T 00 00 0D 52 08 1F 07 6B 06 1E 07 1C 00 04 1F 01
+R 00 00 00 09
+T 00 00 1A F6 88 7B 07 43 6B 04 84 14 03 1E 01 F7
+R 00 00 00 09
+T 00 00 27 1E 07 5C 5C 1F 04 0D 0B 2A 1D 1E 07 F6
+R 00 00 00 09
+T 00 00 34 88 7B 0C A5 10 84 27 05 1A 06 F7 20 03
+R 00 00 00 09
+T 00 00 41
+R 00 00 00 09
+T 00 00 41 14 03 F7
+R 00 00 00 09
+T 00 00 44
+R 00 00 00 09
+T 00 00 44 1E 04 F6 1A 06 1E 04 F7 20 08
+R 00 00 00 09
+T 00 00 4E
+R 00 00 00 09
+T 00 00 4E 1E 04 F6 14 03 1E 04 F7
+R 00 00 00 09
+T 00 00 56
+R 00 00 00 09
+T 00 00 56 1E 07 1C 00 03 F6 88 7B 0C A5 40 84 27
+R 00 00 00 09
+T 00 00 63 05 1A 06 F7 20 03
+R 00 00 00 09
+T 00 00 69
+R 00 00 00 09
+T 00 00 69 14 03 F7
+R 00 00 00 09
+T 00 00 6C
+R 00 00 00 09
+T 00 00 6C 1E 01 F6 88 7B 0C A5 20 84 27 07 1A 06
+R 00 00 00 09
+T 00 00 79 1E 01 F7 20 05
+R 00 00 00 09
+T 00 00 7E
+R 00 00 00 09
+T 00 00 7E 14 03 1E 01 F7
+R 00 00 00 09
+T 00 00 83
+R 00 00 00 09
+T 00 00 83 5B 08 85 84 FC
+R 00 00 00 09
+T 00 00 88
+R 00 00 00 09
+T 00 00 88 F7 81
+R 00 00 00 09
+T 00 00 8A
+R 00 00 00 09
+T 00 00 8A 88 6B 01 F6 1A 01 F7 84 81
+R 00 00 00 09
+T 00 00 93
+R 00 00 00 09
+T 00 00 93 88 88 F6 6B 02 84 43 14 01 F7 84 81
+R 00 00 00 09
+T 00 00 9F
+R 00 00 00 09
+T 00 00 9F 88 6B 01 F6 18 01 F7 84 81
+R 00 00 00 09
+T 00 00 A8
+R 00 00 00 09
+T 00 00 A8 F6 81
+R 00 00 00 09
+T 00 00 AA
+R 00 00 00 09
+T 00 00 AA E6 01 81
+R 00 00 00 09
+T 00 00 AD
+R 00 00 00 09
+T 00 00 AD 88 6B 01 E6 01 14 01 40 4F 49 5B 01 81
+R 00 00 00 09
+T 00 00 BA
+R 00 00 00 09
+T 00 00 BA 88 1C 00 03 88 F6 6B 02 84 0D 04 27 05
+R 00 00 00 09
+T 00 00 C7 1A 01 F7 20 04
+R 00 00 00 09
+T 00 00 CC
+R 00 00 00 09
+T 00 00 CC 43 14 01 F7
+R 00 00 00 09
+T 00 00 D0
+R 00 00 00 09
+T 00 00 D0 84 85 84 FC
+R 00 00 00 09

@@ -1,0 +1,521 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler
+                                      3 ; Version 4.5.0 #15242 (MINGW64)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module stm8s_tim4
+                                      6 	
+                                      7 ;--------------------------------------------------------
+                                      8 ; Public variables in this module
+                                      9 ;--------------------------------------------------------
+                                     10 	.globl _TIM4_DeInit
+                                     11 	.globl _TIM4_TimeBaseInit
+                                     12 	.globl _TIM4_Cmd
+                                     13 	.globl _TIM4_ITConfig
+                                     14 	.globl _TIM4_UpdateDisableConfig
+                                     15 	.globl _TIM4_UpdateRequestConfig
+                                     16 	.globl _TIM4_SelectOnePulseMode
+                                     17 	.globl _TIM4_PrescalerConfig
+                                     18 	.globl _TIM4_ARRPreloadConfig
+                                     19 	.globl _TIM4_GenerateEvent
+                                     20 	.globl _TIM4_SetCounter
+                                     21 	.globl _TIM4_SetAutoreload
+                                     22 	.globl _TIM4_GetCounter
+                                     23 	.globl _TIM4_GetPrescaler
+                                     24 	.globl _TIM4_GetFlagStatus
+                                     25 	.globl _TIM4_ClearFlag
+                                     26 	.globl _TIM4_GetITStatus
+                                     27 	.globl _TIM4_ClearITPendingBit
+                                     28 ;--------------------------------------------------------
+                                     29 ; ram data
+                                     30 ;--------------------------------------------------------
+                                     31 	.area DATA
+                                     32 ;--------------------------------------------------------
+                                     33 ; ram data
+                                     34 ;--------------------------------------------------------
+                                     35 	.area INITIALIZED
+                                     36 ;--------------------------------------------------------
+                                     37 ; absolute external ram data
+                                     38 ;--------------------------------------------------------
+                                     39 	.area DABS (ABS)
+                                     40 
+                                     41 ; default segment ordering for linker
+                                     42 	.area HOME
+                                     43 	.area GSINIT
+                                     44 	.area GSFINAL
+                                     45 	.area CONST
+                                     46 	.area INITIALIZER
+                                     47 	.area CODE
+                                     48 
+                                     49 ;--------------------------------------------------------
+                                     50 ; global & static initialisations
+                                     51 ;--------------------------------------------------------
+                                     52 	.area HOME
+                                     53 	.area GSINIT
+                                     54 	.area GSFINAL
+                                     55 	.area GSINIT
+                                     56 ;--------------------------------------------------------
+                                     57 ; Home
+                                     58 ;--------------------------------------------------------
+                                     59 	.area HOME
+                                     60 	.area HOME
+                                     61 ;--------------------------------------------------------
+                                     62 ; code
+                                     63 ;--------------------------------------------------------
+                                     64 	.area CODE
+                           000000    65 	G$TIM4_DeInit$0$0 ==.
+                           000000    66 	C$stm8s_tim4.c$49$0_0$307 ==.
+                                     67 ;	d:\sdcc\lib\src\stm8s_tim4.c: 49: void TIM4_DeInit(void)
+                                     68 ;	-----------------------------------------
+                                     69 ;	 function TIM4_DeInit
+                                     70 ;	-----------------------------------------
+      000000                         71 _TIM4_DeInit:
+                           000000    72 	C$stm8s_tim4.c$51$1_0$307 ==.
+                                     73 ;	d:\sdcc\lib\src\stm8s_tim4.c: 51: TIM4->CR1 = TIM4_CR1_RESET_VALUE;
+      000000 35 00 53 40      [ 1]   74 	mov	0x5340+0, #0x00
+                           000004    75 	C$stm8s_tim4.c$52$1_0$307 ==.
+                                     76 ;	d:\sdcc\lib\src\stm8s_tim4.c: 52: TIM4->IER = TIM4_IER_RESET_VALUE;
+      000004 35 00 53 43      [ 1]   77 	mov	0x5343+0, #0x00
+                           000008    78 	C$stm8s_tim4.c$53$1_0$307 ==.
+                                     79 ;	d:\sdcc\lib\src\stm8s_tim4.c: 53: TIM4->CNTR = TIM4_CNTR_RESET_VALUE;
+      000008 35 00 53 46      [ 1]   80 	mov	0x5346+0, #0x00
+                           00000C    81 	C$stm8s_tim4.c$54$1_0$307 ==.
+                                     82 ;	d:\sdcc\lib\src\stm8s_tim4.c: 54: TIM4->PSCR = TIM4_PSCR_RESET_VALUE;
+      00000C 35 00 53 47      [ 1]   83 	mov	0x5347+0, #0x00
+                           000010    84 	C$stm8s_tim4.c$55$1_0$307 ==.
+                                     85 ;	d:\sdcc\lib\src\stm8s_tim4.c: 55: TIM4->ARR = TIM4_ARR_RESET_VALUE;
+      000010 35 FF 53 48      [ 1]   86 	mov	0x5348+0, #0xff
+                           000014    87 	C$stm8s_tim4.c$56$1_0$307 ==.
+                                     88 ;	d:\sdcc\lib\src\stm8s_tim4.c: 56: TIM4->SR1 = TIM4_SR1_RESET_VALUE;
+      000014 35 00 53 44      [ 1]   89 	mov	0x5344+0, #0x00
+                           000018    90 	C$stm8s_tim4.c$57$1_0$307 ==.
+                                     91 ;	d:\sdcc\lib\src\stm8s_tim4.c: 57: }
+                           000018    92 	C$stm8s_tim4.c$57$1_0$307 ==.
+                           000018    93 	XG$TIM4_DeInit$0$0 ==.
+      000018 81               [ 4]   94 	ret
+                           000019    95 	G$TIM4_TimeBaseInit$0$0 ==.
+                           000019    96 	C$stm8s_tim4.c$65$1_0$309 ==.
+                                     97 ;	d:\sdcc\lib\src\stm8s_tim4.c: 65: void TIM4_TimeBaseInit(TIM4_Prescaler_TypeDef TIM4_Prescaler, uint8_t TIM4_Period)
+                                     98 ;	-----------------------------------------
+                                     99 ;	 function TIM4_TimeBaseInit
+                                    100 ;	-----------------------------------------
+      000019                        101 _TIM4_TimeBaseInit:
+                           000019   102 	C$stm8s_tim4.c$70$1_0$309 ==.
+                                    103 ;	d:\sdcc\lib\src\stm8s_tim4.c: 70: TIM4->PSCR = (uint8_t)(TIM4_Prescaler);
+      000019 C7 53 47         [ 1]  104 	ld	0x5347, a
+                           00001C   105 	C$stm8s_tim4.c$72$1_0$309 ==.
+                                    106 ;	d:\sdcc\lib\src\stm8s_tim4.c: 72: TIM4->ARR = (uint8_t)(TIM4_Period);
+      00001C AE 53 48         [ 2]  107 	ldw	x, #0x5348
+      00001F 7B 03            [ 1]  108 	ld	a, (0x03, sp)
+      000021 F7               [ 1]  109 	ld	(x), a
+                           000022   110 	C$stm8s_tim4.c$73$1_0$309 ==.
+                                    111 ;	d:\sdcc\lib\src\stm8s_tim4.c: 73: }
+      000022 85               [ 2]  112 	popw	x
+      000023 84               [ 1]  113 	pop	a
+      000024 FC               [ 2]  114 	jp	(x)
+                           000025   115 	G$TIM4_Cmd$0$0 ==.
+                           000025   116 	C$stm8s_tim4.c$81$1_0$311 ==.
+                                    117 ;	d:\sdcc\lib\src\stm8s_tim4.c: 81: void TIM4_Cmd(FunctionalState NewState)
+                                    118 ;	-----------------------------------------
+                                    119 ;	 function TIM4_Cmd
+                                    120 ;	-----------------------------------------
+      000025                        121 _TIM4_Cmd:
+      000025 88               [ 1]  122 	push	a
+      000026 6B 01            [ 1]  123 	ld	(0x01, sp), a
+                           000028   124 	C$stm8s_tim4.c$89$1_0$311 ==.
+                                    125 ;	d:\sdcc\lib\src\stm8s_tim4.c: 89: TIM4->CR1 |= TIM4_CR1_CEN;
+      000028 C6 53 40         [ 1]  126 	ld	a, 0x5340
+                           00002B   127 	C$stm8s_tim4.c$87$1_0$311 ==.
+                                    128 ;	d:\sdcc\lib\src\stm8s_tim4.c: 87: if (NewState != DISABLE)
+      00002B 0D 01            [ 1]  129 	tnz	(0x01, sp)
+      00002D 27 07            [ 1]  130 	jreq	00102$
+                           00002F   131 	C$stm8s_tim4.c$89$2_0$312 ==.
+                                    132 ;	d:\sdcc\lib\src\stm8s_tim4.c: 89: TIM4->CR1 |= TIM4_CR1_CEN;
+      00002F AA 01            [ 1]  133 	or	a, #0x01
+      000031 C7 53 40         [ 1]  134 	ld	0x5340, a
+      000034 20 05            [ 2]  135 	jra	00104$
+      000036                        136 00102$:
+                           000036   137 	C$stm8s_tim4.c$93$2_0$313 ==.
+                                    138 ;	d:\sdcc\lib\src\stm8s_tim4.c: 93: TIM4->CR1 &= (uint8_t)(~TIM4_CR1_CEN);
+      000036 A4 FE            [ 1]  139 	and	a, #0xfe
+      000038 C7 53 40         [ 1]  140 	ld	0x5340, a
+      00003B                        141 00104$:
+                           00003B   142 	C$stm8s_tim4.c$95$1_0$311 ==.
+                                    143 ;	d:\sdcc\lib\src\stm8s_tim4.c: 95: }
+      00003B 84               [ 1]  144 	pop	a
+                           00003C   145 	C$stm8s_tim4.c$95$1_0$311 ==.
+                           00003C   146 	XG$TIM4_Cmd$0$0 ==.
+      00003C 81               [ 4]  147 	ret
+                           00003D   148 	G$TIM4_ITConfig$0$0 ==.
+                           00003D   149 	C$stm8s_tim4.c$107$1_0$315 ==.
+                                    150 ;	d:\sdcc\lib\src\stm8s_tim4.c: 107: void TIM4_ITConfig(TIM4_IT_TypeDef TIM4_IT, FunctionalState NewState)
+                                    151 ;	-----------------------------------------
+                                    152 ;	 function TIM4_ITConfig
+                                    153 ;	-----------------------------------------
+      00003D                        154 _TIM4_ITConfig:
+      00003D 88               [ 1]  155 	push	a
+      00003E 97               [ 1]  156 	ld	xl, a
+                           00003F   157 	C$stm8s_tim4.c$116$1_0$315 ==.
+                                    158 ;	d:\sdcc\lib\src\stm8s_tim4.c: 116: TIM4->IER |= (uint8_t)TIM4_IT;
+      00003F C6 53 43         [ 1]  159 	ld	a, 0x5343
+      000042 6B 01            [ 1]  160 	ld	(0x01, sp), a
+                           000044   161 	C$stm8s_tim4.c$113$1_0$315 ==.
+                                    162 ;	d:\sdcc\lib\src\stm8s_tim4.c: 113: if (NewState != DISABLE)
+      000044 0D 04            [ 1]  163 	tnz	(0x04, sp)
+      000046 27 08            [ 1]  164 	jreq	00102$
+                           000048   165 	C$stm8s_tim4.c$116$2_0$316 ==.
+                                    166 ;	d:\sdcc\lib\src\stm8s_tim4.c: 116: TIM4->IER |= (uint8_t)TIM4_IT;
+      000048 9F               [ 1]  167 	ld	a, xl
+      000049 1A 01            [ 1]  168 	or	a, (0x01, sp)
+      00004B C7 53 43         [ 1]  169 	ld	0x5343, a
+      00004E 20 07            [ 2]  170 	jra	00104$
+      000050                        171 00102$:
+                           000050   172 	C$stm8s_tim4.c$121$2_0$317 ==.
+                                    173 ;	d:\sdcc\lib\src\stm8s_tim4.c: 121: TIM4->IER &= (uint8_t)(~TIM4_IT);
+      000050 9F               [ 1]  174 	ld	a, xl
+      000051 43               [ 1]  175 	cpl	a
+      000052 14 01            [ 1]  176 	and	a, (0x01, sp)
+      000054 C7 53 43         [ 1]  177 	ld	0x5343, a
+      000057                        178 00104$:
+                           000057   179 	C$stm8s_tim4.c$123$1_0$315 ==.
+                                    180 ;	d:\sdcc\lib\src\stm8s_tim4.c: 123: }
+      000057 84               [ 1]  181 	pop	a
+      000058 85               [ 2]  182 	popw	x
+      000059 84               [ 1]  183 	pop	a
+      00005A FC               [ 2]  184 	jp	(x)
+                           00005B   185 	G$TIM4_UpdateDisableConfig$0$0 ==.
+                           00005B   186 	C$stm8s_tim4.c$131$1_0$319 ==.
+                                    187 ;	d:\sdcc\lib\src\stm8s_tim4.c: 131: void TIM4_UpdateDisableConfig(FunctionalState NewState)
+                                    188 ;	-----------------------------------------
+                                    189 ;	 function TIM4_UpdateDisableConfig
+                                    190 ;	-----------------------------------------
+      00005B                        191 _TIM4_UpdateDisableConfig:
+      00005B 88               [ 1]  192 	push	a
+      00005C 6B 01            [ 1]  193 	ld	(0x01, sp), a
+                           00005E   194 	C$stm8s_tim4.c$139$1_0$319 ==.
+                                    195 ;	d:\sdcc\lib\src\stm8s_tim4.c: 139: TIM4->CR1 |= TIM4_CR1_UDIS;
+      00005E C6 53 40         [ 1]  196 	ld	a, 0x5340
+                           000061   197 	C$stm8s_tim4.c$137$1_0$319 ==.
+                                    198 ;	d:\sdcc\lib\src\stm8s_tim4.c: 137: if (NewState != DISABLE)
+      000061 0D 01            [ 1]  199 	tnz	(0x01, sp)
+      000063 27 07            [ 1]  200 	jreq	00102$
+                           000065   201 	C$stm8s_tim4.c$139$2_0$320 ==.
+                                    202 ;	d:\sdcc\lib\src\stm8s_tim4.c: 139: TIM4->CR1 |= TIM4_CR1_UDIS;
+      000065 AA 02            [ 1]  203 	or	a, #0x02
+      000067 C7 53 40         [ 1]  204 	ld	0x5340, a
+      00006A 20 05            [ 2]  205 	jra	00104$
+      00006C                        206 00102$:
+                           00006C   207 	C$stm8s_tim4.c$143$2_0$321 ==.
+                                    208 ;	d:\sdcc\lib\src\stm8s_tim4.c: 143: TIM4->CR1 &= (uint8_t)(~TIM4_CR1_UDIS);
+      00006C A4 FD            [ 1]  209 	and	a, #0xfd
+      00006E C7 53 40         [ 1]  210 	ld	0x5340, a
+      000071                        211 00104$:
+                           000071   212 	C$stm8s_tim4.c$145$1_0$319 ==.
+                                    213 ;	d:\sdcc\lib\src\stm8s_tim4.c: 145: }
+      000071 84               [ 1]  214 	pop	a
+                           000072   215 	C$stm8s_tim4.c$145$1_0$319 ==.
+                           000072   216 	XG$TIM4_UpdateDisableConfig$0$0 ==.
+      000072 81               [ 4]  217 	ret
+                           000073   218 	G$TIM4_UpdateRequestConfig$0$0 ==.
+                           000073   219 	C$stm8s_tim4.c$155$1_0$323 ==.
+                                    220 ;	d:\sdcc\lib\src\stm8s_tim4.c: 155: void TIM4_UpdateRequestConfig(TIM4_UpdateSource_TypeDef TIM4_UpdateSource)
+                                    221 ;	-----------------------------------------
+                                    222 ;	 function TIM4_UpdateRequestConfig
+                                    223 ;	-----------------------------------------
+      000073                        224 _TIM4_UpdateRequestConfig:
+      000073 88               [ 1]  225 	push	a
+      000074 6B 01            [ 1]  226 	ld	(0x01, sp), a
+                           000076   227 	C$stm8s_tim4.c$163$1_0$323 ==.
+                                    228 ;	d:\sdcc\lib\src\stm8s_tim4.c: 163: TIM4->CR1 |= TIM4_CR1_URS;
+      000076 C6 53 40         [ 1]  229 	ld	a, 0x5340
+                           000079   230 	C$stm8s_tim4.c$161$1_0$323 ==.
+                                    231 ;	d:\sdcc\lib\src\stm8s_tim4.c: 161: if (TIM4_UpdateSource != TIM4_UPDATESOURCE_GLOBAL)
+      000079 0D 01            [ 1]  232 	tnz	(0x01, sp)
+      00007B 27 07            [ 1]  233 	jreq	00102$
+                           00007D   234 	C$stm8s_tim4.c$163$2_0$324 ==.
+                                    235 ;	d:\sdcc\lib\src\stm8s_tim4.c: 163: TIM4->CR1 |= TIM4_CR1_URS;
+      00007D AA 04            [ 1]  236 	or	a, #0x04
+      00007F C7 53 40         [ 1]  237 	ld	0x5340, a
+      000082 20 05            [ 2]  238 	jra	00104$
+      000084                        239 00102$:
+                           000084   240 	C$stm8s_tim4.c$167$2_0$325 ==.
+                                    241 ;	d:\sdcc\lib\src\stm8s_tim4.c: 167: TIM4->CR1 &= (uint8_t)(~TIM4_CR1_URS);
+      000084 A4 FB            [ 1]  242 	and	a, #0xfb
+      000086 C7 53 40         [ 1]  243 	ld	0x5340, a
+      000089                        244 00104$:
+                           000089   245 	C$stm8s_tim4.c$169$1_0$323 ==.
+                                    246 ;	d:\sdcc\lib\src\stm8s_tim4.c: 169: }
+      000089 84               [ 1]  247 	pop	a
+                           00008A   248 	C$stm8s_tim4.c$169$1_0$323 ==.
+                           00008A   249 	XG$TIM4_UpdateRequestConfig$0$0 ==.
+      00008A 81               [ 4]  250 	ret
+                           00008B   251 	G$TIM4_SelectOnePulseMode$0$0 ==.
+                           00008B   252 	C$stm8s_tim4.c$179$1_0$327 ==.
+                                    253 ;	d:\sdcc\lib\src\stm8s_tim4.c: 179: void TIM4_SelectOnePulseMode(TIM4_OPMode_TypeDef TIM4_OPMode)
+                                    254 ;	-----------------------------------------
+                                    255 ;	 function TIM4_SelectOnePulseMode
+                                    256 ;	-----------------------------------------
+      00008B                        257 _TIM4_SelectOnePulseMode:
+      00008B 88               [ 1]  258 	push	a
+      00008C 6B 01            [ 1]  259 	ld	(0x01, sp), a
+                           00008E   260 	C$stm8s_tim4.c$187$1_0$327 ==.
+                                    261 ;	d:\sdcc\lib\src\stm8s_tim4.c: 187: TIM4->CR1 |= TIM4_CR1_OPM;
+      00008E C6 53 40         [ 1]  262 	ld	a, 0x5340
+                           000091   263 	C$stm8s_tim4.c$185$1_0$327 ==.
+                                    264 ;	d:\sdcc\lib\src\stm8s_tim4.c: 185: if (TIM4_OPMode != TIM4_OPMODE_REPETITIVE)
+      000091 0D 01            [ 1]  265 	tnz	(0x01, sp)
+      000093 27 07            [ 1]  266 	jreq	00102$
+                           000095   267 	C$stm8s_tim4.c$187$2_0$328 ==.
+                                    268 ;	d:\sdcc\lib\src\stm8s_tim4.c: 187: TIM4->CR1 |= TIM4_CR1_OPM;
+      000095 AA 08            [ 1]  269 	or	a, #0x08
+      000097 C7 53 40         [ 1]  270 	ld	0x5340, a
+      00009A 20 05            [ 2]  271 	jra	00104$
+      00009C                        272 00102$:
+                           00009C   273 	C$stm8s_tim4.c$191$2_0$329 ==.
+                                    274 ;	d:\sdcc\lib\src\stm8s_tim4.c: 191: TIM4->CR1 &= (uint8_t)(~TIM4_CR1_OPM);
+      00009C A4 F7            [ 1]  275 	and	a, #0xf7
+      00009E C7 53 40         [ 1]  276 	ld	0x5340, a
+      0000A1                        277 00104$:
+                           0000A1   278 	C$stm8s_tim4.c$193$1_0$327 ==.
+                                    279 ;	d:\sdcc\lib\src\stm8s_tim4.c: 193: }
+      0000A1 84               [ 1]  280 	pop	a
+                           0000A2   281 	C$stm8s_tim4.c$193$1_0$327 ==.
+                           0000A2   282 	XG$TIM4_SelectOnePulseMode$0$0 ==.
+      0000A2 81               [ 4]  283 	ret
+                           0000A3   284 	G$TIM4_PrescalerConfig$0$0 ==.
+                           0000A3   285 	C$stm8s_tim4.c$215$1_0$331 ==.
+                                    286 ;	d:\sdcc\lib\src\stm8s_tim4.c: 215: void TIM4_PrescalerConfig(TIM4_Prescaler_TypeDef Prescaler, TIM4_PSCReloadMode_TypeDef TIM4_PSCReloadMode)
+                                    287 ;	-----------------------------------------
+                                    288 ;	 function TIM4_PrescalerConfig
+                                    289 ;	-----------------------------------------
+      0000A3                        290 _TIM4_PrescalerConfig:
+                           0000A3   291 	C$stm8s_tim4.c$222$1_0$331 ==.
+                                    292 ;	d:\sdcc\lib\src\stm8s_tim4.c: 222: TIM4->PSCR = (uint8_t)Prescaler;
+      0000A3 C7 53 47         [ 1]  293 	ld	0x5347, a
+                           0000A6   294 	C$stm8s_tim4.c$225$1_0$331 ==.
+                                    295 ;	d:\sdcc\lib\src\stm8s_tim4.c: 225: TIM4->EGR = (uint8_t)TIM4_PSCReloadMode;
+      0000A6 7B 03            [ 1]  296 	ld	a, (0x03, sp)
+      0000A8 C7 53 45         [ 1]  297 	ld	0x5345, a
+                           0000AB   298 	C$stm8s_tim4.c$226$1_0$331 ==.
+                                    299 ;	d:\sdcc\lib\src\stm8s_tim4.c: 226: }
+      0000AB 85               [ 2]  300 	popw	x
+      0000AC 84               [ 1]  301 	pop	a
+      0000AD FC               [ 2]  302 	jp	(x)
+                           0000AE   303 	G$TIM4_ARRPreloadConfig$0$0 ==.
+                           0000AE   304 	C$stm8s_tim4.c$234$1_0$333 ==.
+                                    305 ;	d:\sdcc\lib\src\stm8s_tim4.c: 234: void TIM4_ARRPreloadConfig(FunctionalState NewState)
+                                    306 ;	-----------------------------------------
+                                    307 ;	 function TIM4_ARRPreloadConfig
+                                    308 ;	-----------------------------------------
+      0000AE                        309 _TIM4_ARRPreloadConfig:
+      0000AE 88               [ 1]  310 	push	a
+      0000AF 6B 01            [ 1]  311 	ld	(0x01, sp), a
+                           0000B1   312 	C$stm8s_tim4.c$242$1_0$333 ==.
+                                    313 ;	d:\sdcc\lib\src\stm8s_tim4.c: 242: TIM4->CR1 |= TIM4_CR1_ARPE;
+      0000B1 C6 53 40         [ 1]  314 	ld	a, 0x5340
+                           0000B4   315 	C$stm8s_tim4.c$240$1_0$333 ==.
+                                    316 ;	d:\sdcc\lib\src\stm8s_tim4.c: 240: if (NewState != DISABLE)
+      0000B4 0D 01            [ 1]  317 	tnz	(0x01, sp)
+      0000B6 27 07            [ 1]  318 	jreq	00102$
+                           0000B8   319 	C$stm8s_tim4.c$242$2_0$334 ==.
+                                    320 ;	d:\sdcc\lib\src\stm8s_tim4.c: 242: TIM4->CR1 |= TIM4_CR1_ARPE;
+      0000B8 AA 80            [ 1]  321 	or	a, #0x80
+      0000BA C7 53 40         [ 1]  322 	ld	0x5340, a
+      0000BD 20 05            [ 2]  323 	jra	00104$
+      0000BF                        324 00102$:
+                           0000BF   325 	C$stm8s_tim4.c$246$2_0$335 ==.
+                                    326 ;	d:\sdcc\lib\src\stm8s_tim4.c: 246: TIM4->CR1 &= (uint8_t)(~TIM4_CR1_ARPE);
+      0000BF A4 7F            [ 1]  327 	and	a, #0x7f
+      0000C1 C7 53 40         [ 1]  328 	ld	0x5340, a
+      0000C4                        329 00104$:
+                           0000C4   330 	C$stm8s_tim4.c$248$1_0$333 ==.
+                                    331 ;	d:\sdcc\lib\src\stm8s_tim4.c: 248: }
+      0000C4 84               [ 1]  332 	pop	a
+                           0000C5   333 	C$stm8s_tim4.c$248$1_0$333 ==.
+                           0000C5   334 	XG$TIM4_ARRPreloadConfig$0$0 ==.
+      0000C5 81               [ 4]  335 	ret
+                           0000C6   336 	G$TIM4_GenerateEvent$0$0 ==.
+                           0000C6   337 	C$stm8s_tim4.c$257$1_0$337 ==.
+                                    338 ;	d:\sdcc\lib\src\stm8s_tim4.c: 257: void TIM4_GenerateEvent(TIM4_EventSource_TypeDef TIM4_EventSource)
+                                    339 ;	-----------------------------------------
+                                    340 ;	 function TIM4_GenerateEvent
+                                    341 ;	-----------------------------------------
+      0000C6                        342 _TIM4_GenerateEvent:
+                           0000C6   343 	C$stm8s_tim4.c$263$1_0$337 ==.
+                                    344 ;	d:\sdcc\lib\src\stm8s_tim4.c: 263: TIM4->EGR = (uint8_t)(TIM4_EventSource);
+      0000C6 C7 53 45         [ 1]  345 	ld	0x5345, a
+                           0000C9   346 	C$stm8s_tim4.c$264$1_0$337 ==.
+                                    347 ;	d:\sdcc\lib\src\stm8s_tim4.c: 264: }
+                           0000C9   348 	C$stm8s_tim4.c$264$1_0$337 ==.
+                           0000C9   349 	XG$TIM4_GenerateEvent$0$0 ==.
+      0000C9 81               [ 4]  350 	ret
+                           0000CA   351 	G$TIM4_SetCounter$0$0 ==.
+                           0000CA   352 	C$stm8s_tim4.c$272$1_0$339 ==.
+                                    353 ;	d:\sdcc\lib\src\stm8s_tim4.c: 272: void TIM4_SetCounter(uint8_t Counter)
+                                    354 ;	-----------------------------------------
+                                    355 ;	 function TIM4_SetCounter
+                                    356 ;	-----------------------------------------
+      0000CA                        357 _TIM4_SetCounter:
+                           0000CA   358 	C$stm8s_tim4.c$275$1_0$339 ==.
+                                    359 ;	d:\sdcc\lib\src\stm8s_tim4.c: 275: TIM4->CNTR = (uint8_t)(Counter);
+      0000CA C7 53 46         [ 1]  360 	ld	0x5346, a
+                           0000CD   361 	C$stm8s_tim4.c$276$1_0$339 ==.
+                                    362 ;	d:\sdcc\lib\src\stm8s_tim4.c: 276: }
+                           0000CD   363 	C$stm8s_tim4.c$276$1_0$339 ==.
+                           0000CD   364 	XG$TIM4_SetCounter$0$0 ==.
+      0000CD 81               [ 4]  365 	ret
+                           0000CE   366 	G$TIM4_SetAutoreload$0$0 ==.
+                           0000CE   367 	C$stm8s_tim4.c$284$1_0$341 ==.
+                                    368 ;	d:\sdcc\lib\src\stm8s_tim4.c: 284: void TIM4_SetAutoreload(uint8_t Autoreload)
+                                    369 ;	-----------------------------------------
+                                    370 ;	 function TIM4_SetAutoreload
+                                    371 ;	-----------------------------------------
+      0000CE                        372 _TIM4_SetAutoreload:
+                           0000CE   373 	C$stm8s_tim4.c$287$1_0$341 ==.
+                                    374 ;	d:\sdcc\lib\src\stm8s_tim4.c: 287: TIM4->ARR = (uint8_t)(Autoreload);
+      0000CE C7 53 48         [ 1]  375 	ld	0x5348, a
+                           0000D1   376 	C$stm8s_tim4.c$288$1_0$341 ==.
+                                    377 ;	d:\sdcc\lib\src\stm8s_tim4.c: 288: }
+                           0000D1   378 	C$stm8s_tim4.c$288$1_0$341 ==.
+                           0000D1   379 	XG$TIM4_SetAutoreload$0$0 ==.
+      0000D1 81               [ 4]  380 	ret
+                           0000D2   381 	G$TIM4_GetCounter$0$0 ==.
+                           0000D2   382 	C$stm8s_tim4.c$295$1_0$343 ==.
+                                    383 ;	d:\sdcc\lib\src\stm8s_tim4.c: 295: uint8_t TIM4_GetCounter(void)
+                                    384 ;	-----------------------------------------
+                                    385 ;	 function TIM4_GetCounter
+                                    386 ;	-----------------------------------------
+      0000D2                        387 _TIM4_GetCounter:
+                           0000D2   388 	C$stm8s_tim4.c$298$1_0$343 ==.
+                                    389 ;	d:\sdcc\lib\src\stm8s_tim4.c: 298: return (uint8_t)(TIM4->CNTR);
+      0000D2 C6 53 46         [ 1]  390 	ld	a, 0x5346
+                           0000D5   391 	C$stm8s_tim4.c$299$1_0$343 ==.
+                                    392 ;	d:\sdcc\lib\src\stm8s_tim4.c: 299: }
+                           0000D5   393 	C$stm8s_tim4.c$299$1_0$343 ==.
+                           0000D5   394 	XG$TIM4_GetCounter$0$0 ==.
+      0000D5 81               [ 4]  395 	ret
+                           0000D6   396 	G$TIM4_GetPrescaler$0$0 ==.
+                           0000D6   397 	C$stm8s_tim4.c$306$1_0$345 ==.
+                                    398 ;	d:\sdcc\lib\src\stm8s_tim4.c: 306: TIM4_Prescaler_TypeDef TIM4_GetPrescaler(void)
+                                    399 ;	-----------------------------------------
+                                    400 ;	 function TIM4_GetPrescaler
+                                    401 ;	-----------------------------------------
+      0000D6                        402 _TIM4_GetPrescaler:
+                           0000D6   403 	C$stm8s_tim4.c$309$1_0$345 ==.
+                                    404 ;	d:\sdcc\lib\src\stm8s_tim4.c: 309: return (TIM4_Prescaler_TypeDef)(TIM4->PSCR);
+      0000D6 C6 53 47         [ 1]  405 	ld	a, 0x5347
+                           0000D9   406 	C$stm8s_tim4.c$310$1_0$345 ==.
+                                    407 ;	d:\sdcc\lib\src\stm8s_tim4.c: 310: }
+                           0000D9   408 	C$stm8s_tim4.c$310$1_0$345 ==.
+                           0000D9   409 	XG$TIM4_GetPrescaler$0$0 ==.
+      0000D9 81               [ 4]  410 	ret
+                           0000DA   411 	G$TIM4_GetFlagStatus$0$0 ==.
+                           0000DA   412 	C$stm8s_tim4.c$319$1_0$347 ==.
+                                    413 ;	d:\sdcc\lib\src\stm8s_tim4.c: 319: FlagStatus TIM4_GetFlagStatus(TIM4_FLAG_TypeDef TIM4_FLAG)
+                                    414 ;	-----------------------------------------
+                                    415 ;	 function TIM4_GetFlagStatus
+                                    416 ;	-----------------------------------------
+      0000DA                        417 _TIM4_GetFlagStatus:
+      0000DA 97               [ 1]  418 	ld	xl, a
+                           0000DB   419 	C$stm8s_tim4.c$326$1_0$347 ==.
+                                    420 ;	d:\sdcc\lib\src\stm8s_tim4.c: 326: if ((TIM4->SR1 & (uint8_t)TIM4_FLAG)  != 0)
+      0000DB C6 53 44         [ 1]  421 	ld	a, 0x5344
+      0000DE 89               [ 2]  422 	pushw	x
+      0000DF 14 02            [ 1]  423 	and	a, (2, sp)
+      0000E1 85               [ 2]  424 	popw	x
+      0000E2 4D               [ 1]  425 	tnz	a
+      0000E3 27 03            [ 1]  426 	jreq	00102$
+                           0000E5   427 	C$stm8s_tim4.c$328$2_0$348 ==.
+                                    428 ;	d:\sdcc\lib\src\stm8s_tim4.c: 328: bitstatus = SET;
+      0000E5 A6 01            [ 1]  429 	ld	a, #0x01
+      0000E7 81               [ 4]  430 	ret
+      0000E8                        431 00102$:
+                           0000E8   432 	C$stm8s_tim4.c$332$2_0$349 ==.
+                                    433 ;	d:\sdcc\lib\src\stm8s_tim4.c: 332: bitstatus = RESET;
+      0000E8 4F               [ 1]  434 	clr	a
+                           0000E9   435 	C$stm8s_tim4.c$334$1_0$347 ==.
+                                    436 ;	d:\sdcc\lib\src\stm8s_tim4.c: 334: return ((FlagStatus)bitstatus);
+                           0000E9   437 	C$stm8s_tim4.c$335$1_0$347 ==.
+                                    438 ;	d:\sdcc\lib\src\stm8s_tim4.c: 335: }
+                           0000E9   439 	C$stm8s_tim4.c$335$1_0$347 ==.
+                           0000E9   440 	XG$TIM4_GetFlagStatus$0$0 ==.
+      0000E9 81               [ 4]  441 	ret
+                           0000EA   442 	G$TIM4_ClearFlag$0$0 ==.
+                           0000EA   443 	C$stm8s_tim4.c$344$1_0$351 ==.
+                                    444 ;	d:\sdcc\lib\src\stm8s_tim4.c: 344: void TIM4_ClearFlag(TIM4_FLAG_TypeDef TIM4_FLAG)
+                                    445 ;	-----------------------------------------
+                                    446 ;	 function TIM4_ClearFlag
+                                    447 ;	-----------------------------------------
+      0000EA                        448 _TIM4_ClearFlag:
+                           0000EA   449 	C$stm8s_tim4.c$350$1_0$351 ==.
+                                    450 ;	d:\sdcc\lib\src\stm8s_tim4.c: 350: TIM4->SR1 = (uint8_t)(~TIM4_FLAG);
+      0000EA 43               [ 1]  451 	cpl	a
+      0000EB C7 53 44         [ 1]  452 	ld	0x5344, a
+                           0000EE   453 	C$stm8s_tim4.c$351$1_0$351 ==.
+                                    454 ;	d:\sdcc\lib\src\stm8s_tim4.c: 351: }
+                           0000EE   455 	C$stm8s_tim4.c$351$1_0$351 ==.
+                           0000EE   456 	XG$TIM4_ClearFlag$0$0 ==.
+      0000EE 81               [ 4]  457 	ret
+                           0000EF   458 	G$TIM4_GetITStatus$0$0 ==.
+                           0000EF   459 	C$stm8s_tim4.c$360$1_0$353 ==.
+                                    460 ;	d:\sdcc\lib\src\stm8s_tim4.c: 360: ITStatus TIM4_GetITStatus(TIM4_IT_TypeDef TIM4_IT)
+                                    461 ;	-----------------------------------------
+                                    462 ;	 function TIM4_GetITStatus
+                                    463 ;	-----------------------------------------
+      0000EF                        464 _TIM4_GetITStatus:
+      0000EF 52 02            [ 2]  465 	sub	sp, #2
+      0000F1 97               [ 1]  466 	ld	xl, a
+                           0000F2   467 	C$stm8s_tim4.c$369$1_0$353 ==.
+                                    468 ;	d:\sdcc\lib\src\stm8s_tim4.c: 369: itstatus = (uint8_t)(TIM4->SR1 & (uint8_t)TIM4_IT);
+      0000F2 C6 53 44         [ 1]  469 	ld	a, 0x5344
+      0000F5 41               [ 1]  470 	exg	a, xl
+      0000F6 6B 01            [ 1]  471 	ld	(0x01, sp), a
+      0000F8 41               [ 1]  472 	exg	a, xl
+      0000F9 14 01            [ 1]  473 	and	a, (0x01, sp)
+      0000FB 6B 02            [ 1]  474 	ld	(0x02, sp), a
+                           0000FD   475 	C$stm8s_tim4.c$371$1_0$353 ==.
+                                    476 ;	d:\sdcc\lib\src\stm8s_tim4.c: 371: itenable = (uint8_t)(TIM4->IER & (uint8_t)TIM4_IT);
+      0000FD C6 53 43         [ 1]  477 	ld	a, 0x5343
+      000100 14 01            [ 1]  478 	and	a, (0x01, sp)
+                           000102   479 	C$stm8s_tim4.c$373$1_0$353 ==.
+                                    480 ;	d:\sdcc\lib\src\stm8s_tim4.c: 373: if ((itstatus != (uint8_t)RESET ) && (itenable != (uint8_t)RESET ))
+      000102 0D 02            [ 1]  481 	tnz	(0x02, sp)
+      000104 27 06            [ 1]  482 	jreq	00102$
+      000106 4D               [ 1]  483 	tnz	a
+      000107 27 03            [ 1]  484 	jreq	00102$
+                           000109   485 	C$stm8s_tim4.c$375$2_0$354 ==.
+                                    486 ;	d:\sdcc\lib\src\stm8s_tim4.c: 375: bitstatus = (ITStatus)SET;
+      000109 A6 01            [ 1]  487 	ld	a, #0x01
+                           00010B   488 	C$stm8s_tim4.c$379$2_0$355 ==.
+                                    489 ;	d:\sdcc\lib\src\stm8s_tim4.c: 379: bitstatus = (ITStatus)RESET;
+      00010B 21                     490 	.byte 0x21
+      00010C                        491 00102$:
+      00010C 4F               [ 1]  492 	clr	a
+      00010D                        493 00103$:
+                           00010D   494 	C$stm8s_tim4.c$381$1_0$353 ==.
+                                    495 ;	d:\sdcc\lib\src\stm8s_tim4.c: 381: return ((ITStatus)bitstatus);
+                           00010D   496 	C$stm8s_tim4.c$382$1_0$353 ==.
+                                    497 ;	d:\sdcc\lib\src\stm8s_tim4.c: 382: }
+      00010D 5B 02            [ 2]  498 	addw	sp, #2
+                           00010F   499 	C$stm8s_tim4.c$382$1_0$353 ==.
+                           00010F   500 	XG$TIM4_GetITStatus$0$0 ==.
+      00010F 81               [ 4]  501 	ret
+                           000110   502 	G$TIM4_ClearITPendingBit$0$0 ==.
+                           000110   503 	C$stm8s_tim4.c$391$1_0$357 ==.
+                                    504 ;	d:\sdcc\lib\src\stm8s_tim4.c: 391: void TIM4_ClearITPendingBit(TIM4_IT_TypeDef TIM4_IT)
+                                    505 ;	-----------------------------------------
+                                    506 ;	 function TIM4_ClearITPendingBit
+                                    507 ;	-----------------------------------------
+      000110                        508 _TIM4_ClearITPendingBit:
+                           000110   509 	C$stm8s_tim4.c$397$1_0$357 ==.
+                                    510 ;	d:\sdcc\lib\src\stm8s_tim4.c: 397: TIM4->SR1 = (uint8_t)(~TIM4_IT);
+      000110 43               [ 1]  511 	cpl	a
+      000111 C7 53 44         [ 1]  512 	ld	0x5344, a
+                           000114   513 	C$stm8s_tim4.c$398$1_0$357 ==.
+                                    514 ;	d:\sdcc\lib\src\stm8s_tim4.c: 398: }
+                           000114   515 	C$stm8s_tim4.c$398$1_0$357 ==.
+                           000114   516 	XG$TIM4_ClearITPendingBit$0$0 ==.
+      000114 81               [ 4]  517 	ret
+                                    518 	.area CODE
+                                    519 	.area CONST
+                                    520 	.area INITIALIZER
+                                    521 	.area CABS (ABS)

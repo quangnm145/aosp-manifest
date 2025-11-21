@@ -1,0 +1,92 @@
+# D:/common/Makefile.common
+# Common makefile cho tất cả STM8 projects
+# Include trong project Makefile của bạn: include ../../common/Makefile.common
+
+# ============================================================================
+# CÁC BIẾN CẦN ĐỊNH NGHĨA TRONG PROJECT MAKEFILE:
+# ============================================================================
+# PROJECT_NAME  := tên_project (nếu không thì dùng tên thư mục hiện tại)
+# MCU           := stm8s003f3 (default)
+# PROBE         := stlinkv2 (default)
+# SRC           := main.c file1.c file2.c (default: main.c)
+# LIB_SRC_FILES := stm8s_gpio.c stm8s_clk.c stm8s_tim4.c (nếu để trống thì không compile lib)
+# ============================================================================
+
+CC        := sdcc
+PACKIHX   := packihx
+STM8FLASH := stm8flash
+
+# Giá trị mặc định
+PROJECT_NAME  ?= $(notdir $(abspath .))
+MCU           ?= stm8s003f3
+PROBE         ?= stlinkv2
+SRC           ?= main.c
+LIB_SRC_FILES ?=
+
+# Đường dẫn thư mục (tính từ vị trí project)
+COMMON_DIR   ?= $(dir $(lastword $(MAKEFILE_LIST)))
+LIB_DIR      ?= $(COMMON_DIR)/../lib
+
+LIB_INC      := $(LIB_DIR)/inc
+LIB_SRC      := $(LIB_DIR)/src
+
+OBJ_DIR      := object
+OUT_DIR      := output
+
+# Convert tên files từ LIB_SRC_FILES thành đường dẫn đầy đủ
+LIB_C_FILES  := $(addprefix $(LIB_SRC)/,$(LIB_SRC_FILES))
+LIB_OBJ      := $(patsubst $(LIB_SRC)/%.c,$(OBJ_DIR)/%.rel,$(LIB_C_FILES))
+
+# Compiler flags
+VPATH        := . $(LIB_SRC)
+
+CFLAGS       := -mstm8 --std-c99 --opt-code-speed --debug
+CFLAGS       += -I. -I$(LIB_INC)
+CFLAGS       += -DSTM8S003 -DUSE_STDPERIPH_DRIVER -D__SDCC__
+
+LDFLAGS      := -mstm8 --out-fmt-ihx
+
+# Output files
+IHX          := $(OUT_DIR)/$(PROJECT_NAME).ihx
+HEX          := $(OUT_DIR)/$(PROJECT_NAME).hex
+OBJS         := $(patsubst %.c,$(OBJ_DIR)/%.rel,$(SRC)) $(LIB_OBJ)
+
+# ============================================================================
+# TARGETS
+# ============================================================================
+
+.PHONY: all clean flash info
+
+all: $(HEX)
+
+$(OBJ_DIR) $(OUT_DIR):
+	@mkdir -p "$@"
+
+$(OBJ_DIR)/%.rel: %.c | $(OBJ_DIR)
+	$(CC) -c $(CFLAGS) $< -o $@
+
+$(OBJ_DIR)/%.rel: $(LIB_SRC)/%.c | $(OBJ_DIR)
+	$(CC) -c $(CFLAGS) $< -o $@
+
+$(IHX): $(OBJS) | $(OUT_DIR)
+	$(CC) $(LDFLAGS) $(OBJS) -o $(IHX)
+
+$(HEX): $(IHX)
+	$(PACKIHX) $(IHX) > $(HEX)
+
+clean:
+	@rm -rf $(OBJ_DIR) $(OUT_DIR)
+
+flash: $(HEX)
+	$(STM8FLASH) -c $(PROBE) -p $(MCU) -w $(HEX)
+
+info:
+	@echo "======================================"
+	@echo "Project     : $(PROJECT_NAME)"
+	@echo "MCU         : $(MCU)"
+	@echo "Probe       : $(PROBE)"
+	@echo "Source      : $(SRC)"
+	@echo "Lib Inc     : $(LIB_INC)"
+	@echo "Lib Src Dir : $(LIB_SRC)"
+	@echo "Lib Files   : $(LIB_SRC_FILES)"
+	@echo "======================================"

@@ -1,0 +1,268 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 1
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  002710 L
+    .__.ABS.                                                    =  000000 G
+    .__.CPU.                                                    =  000000 L
+    .__.H$L.                                                    =  000001 L
+  9 A$stm8s_gpio$100                                               00001A GR
+  9 A$stm8s_gpio$101                                               00001B GR
+  9 A$stm8s_gpio$102                                               00001C GR
+  9 A$stm8s_gpio$103                                               00001E GR
+  9 A$stm8s_gpio$104                                               00001F GR
+  9 A$stm8s_gpio$105                                               000021 GR
+  9 A$stm8s_gpio$106                                               000022 GR
+  9 A$stm8s_gpio$107                                               000024 GR
+  9 A$stm8s_gpio$108                                               000026 GR
+  9 A$stm8s_gpio$111                                               000027 GR
+  9 A$stm8s_gpio$112                                               000029 GR
+  9 A$stm8s_gpio$113                                               00002A GR
+  9 A$stm8s_gpio$114                                               00002B GR
+  9 A$stm8s_gpio$117                                               00002D GR
+  9 A$stm8s_gpio$118                                               00002F GR
+  9 A$stm8s_gpio$121                                               000031 GR
+  9 A$stm8s_gpio$122                                               000033 GR
+  9 A$stm8s_gpio$125                                               000034 GR
+  9 A$stm8s_gpio$126                                               000035 GR
+  9 A$stm8s_gpio$127                                               000037 GR
+  9 A$stm8s_gpio$128                                               000039 GR
+  9 A$stm8s_gpio$129                                               00003A GR
+  9 A$stm8s_gpio$132                                               00003C GR
+  9 A$stm8s_gpio$133                                               00003E GR
+  9 A$stm8s_gpio$134                                               00003F GR
+  9 A$stm8s_gpio$138                                               000041 GR
+  9 A$stm8s_gpio$139                                               000043 GR
+  9 A$stm8s_gpio$143                                               000044 GR
+  9 A$stm8s_gpio$144                                               000046 GR
+  9 A$stm8s_gpio$145                                               000047 GR
+  9 A$stm8s_gpio$146                                               000049 GR
+  9 A$stm8s_gpio$147                                               00004B GR
+  9 A$stm8s_gpio$148                                               00004C GR
+  9 A$stm8s_gpio$152                                               00004E GR
+  9 A$stm8s_gpio$153                                               000050 GR
+  9 A$stm8s_gpio$154                                               000051 GR
+  9 A$stm8s_gpio$155                                               000053 GR
+  9 A$stm8s_gpio$156                                               000055 GR
+  9 A$stm8s_gpio$160                                               000056 GR
+  9 A$stm8s_gpio$161                                               000058 GR
+  9 A$stm8s_gpio$162                                               00005B GR
+  9 A$stm8s_gpio$165                                               00005C GR
+  9 A$stm8s_gpio$166                                               00005D GR
+  9 A$stm8s_gpio$167                                               00005F GR
+  9 A$stm8s_gpio$168                                               000061 GR
+  9 A$stm8s_gpio$169                                               000062 GR
+  9 A$stm8s_gpio$172                                               000064 GR
+  9 A$stm8s_gpio$173                                               000066 GR
+  9 A$stm8s_gpio$174                                               000067 GR
+  9 A$stm8s_gpio$178                                               000069 GR
+  9 A$stm8s_gpio$179                                               00006B GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 2
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  9 A$stm8s_gpio$183                                               00006C GR
+  9 A$stm8s_gpio$184                                               00006E GR
+  9 A$stm8s_gpio$187                                               00006F GR
+  9 A$stm8s_gpio$188                                               000070 GR
+  9 A$stm8s_gpio$189                                               000072 GR
+  9 A$stm8s_gpio$190                                               000074 GR
+  9 A$stm8s_gpio$191                                               000075 GR
+  9 A$stm8s_gpio$194                                               000077 GR
+  9 A$stm8s_gpio$195                                               000079 GR
+  9 A$stm8s_gpio$196                                               00007B GR
+  9 A$stm8s_gpio$197                                               00007C GR
+  9 A$stm8s_gpio$201                                               00007E GR
+  9 A$stm8s_gpio$202                                               000080 GR
+  9 A$stm8s_gpio$203                                               000082 GR
+  9 A$stm8s_gpio$207                                               000083 GR
+  9 A$stm8s_gpio$208                                               000085 GR
+  9 A$stm8s_gpio$209                                               000086 GR
+  9 A$stm8s_gpio$210                                               000087 GR
+  9 A$stm8s_gpio$220                                               000088 GR
+  9 A$stm8s_gpio$225                                               000089 GR
+  9 A$stm8s_gpio$233                                               00008A GR
+  9 A$stm8s_gpio$234                                               00008B GR
+  9 A$stm8s_gpio$237                                               00008D GR
+  9 A$stm8s_gpio$238                                               00008E GR
+  9 A$stm8s_gpio$239                                               000090 GR
+  9 A$stm8s_gpio$242                                               000091 GR
+  9 A$stm8s_gpio$245                                               000092 GR
+  9 A$stm8s_gpio$253                                               000093 GR
+  9 A$stm8s_gpio$256                                               000094 GR
+  9 A$stm8s_gpio$257                                               000095 GR
+  9 A$stm8s_gpio$258                                               000096 GR
+  9 A$stm8s_gpio$259                                               000098 GR
+  9 A$stm8s_gpio$260                                               000099 GR
+  9 A$stm8s_gpio$261                                               00009A GR
+  9 A$stm8s_gpio$262                                               00009C GR
+  9 A$stm8s_gpio$265                                               00009D GR
+  9 A$stm8s_gpio$268                                               00009E GR
+  9 A$stm8s_gpio$276                                               00009F GR
+  9 A$stm8s_gpio$277                                               0000A0 GR
+  9 A$stm8s_gpio$280                                               0000A2 GR
+  9 A$stm8s_gpio$281                                               0000A3 GR
+  9 A$stm8s_gpio$282                                               0000A5 GR
+  9 A$stm8s_gpio$285                                               0000A6 GR
+  9 A$stm8s_gpio$288                                               0000A7 GR
+  9 A$stm8s_gpio$298                                               0000A8 GR
+  9 A$stm8s_gpio$303                                               0000A9 GR
+  9 A$stm8s_gpio$313                                               0000AA GR
+  9 A$stm8s_gpio$318                                               0000AC GR
+  9 A$stm8s_gpio$326                                               0000AD GR
+  9 A$stm8s_gpio$327                                               0000AE GR
+  9 A$stm8s_gpio$330                                               0000B0 GR
+  9 A$stm8s_gpio$331                                               0000B2 GR
+  9 A$stm8s_gpio$332                                               0000B4 GR
+  9 A$stm8s_gpio$333                                               0000B5 GR
+  9 A$stm8s_gpio$334                                               0000B6 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 3
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  9 A$stm8s_gpio$337                                               0000B7 GR
+  9 A$stm8s_gpio$340                                               0000B9 GR
+  9 A$stm8s_gpio$348                                               0000BA GR
+  9 A$stm8s_gpio$351                                               0000BB GR
+  9 A$stm8s_gpio$352                                               0000BE GR
+  9 A$stm8s_gpio$353                                               0000BF GR
+  9 A$stm8s_gpio$354                                               0000C0 GR
+  9 A$stm8s_gpio$355                                               0000C2 GR
+  9 A$stm8s_gpio$358                                               0000C3 GR
+  9 A$stm8s_gpio$359                                               0000C5 GR
+  9 A$stm8s_gpio$362                                               0000C7 GR
+  9 A$stm8s_gpio$363                                               0000C9 GR
+  9 A$stm8s_gpio$364                                               0000CA GR
+  9 A$stm8s_gpio$368                                               0000CC GR
+  9 A$stm8s_gpio$369                                               0000CD GR
+  9 A$stm8s_gpio$370                                               0000CF GR
+  9 A$stm8s_gpio$374                                               0000D0 GR
+  9 A$stm8s_gpio$375                                               0000D1 GR
+  9 A$stm8s_gpio$376                                               0000D2 GR
+  9 A$stm8s_gpio$377                                               0000D3 GR
+  9 A$stm8s_gpio$64                                                000000 GR
+  9 A$stm8s_gpio$67                                                000001 GR
+  9 A$stm8s_gpio$70                                                000003 GR
+  9 A$stm8s_gpio$71                                                000004 GR
+  9 A$stm8s_gpio$74                                                000006 GR
+  9 A$stm8s_gpio$75                                                000007 GR
+  9 A$stm8s_gpio$78                                                000009 GR
+  9 A$stm8s_gpio$79                                                00000A GR
+  9 A$stm8s_gpio$84                                                00000C GR
+  9 A$stm8s_gpio$92                                                00000D GR
+  9 A$stm8s_gpio$93                                                00000F GR
+  9 A$stm8s_gpio$94                                                000011 GR
+  9 A$stm8s_gpio$97                                                000013 GR
+  9 A$stm8s_gpio$98                                                000015 GR
+  9 A$stm8s_gpio$99                                                000018 GR
+  9 C$stm8s_gpio.c$103$2_0$313                                  =  00004E GR
+  9 C$stm8s_gpio.c$110$1_0$309                                  =  00005C GR
+  9 C$stm8s_gpio.c$112$1_0$309                                  =  000056 GR
+  9 C$stm8s_gpio.c$112$2_0$314                                  =  000064 GR
+  9 C$stm8s_gpio.c$116$2_0$315                                  =  000069 GR
+  9 C$stm8s_gpio.c$123$1_0$309                                  =  00006F GR
+  9 C$stm8s_gpio.c$125$2_0$316                                  =  000077 GR
+  9 C$stm8s_gpio.c$129$2_0$317                                  =  00007E GR
+  9 C$stm8s_gpio.c$131$1_0$309                                  =  000083 GR
+  9 C$stm8s_gpio.c$141$1_0$319                                  =  000088 GR
+  9 C$stm8s_gpio.c$143$1_0$319                                  =  000088 GR
+  9 C$stm8s_gpio.c$144$1_0$319                                  =  000089 GR
+  9 C$stm8s_gpio.c$154$1_0$321                                  =  00008A GR
+  9 C$stm8s_gpio.c$156$1_0$321                                  =  00008D GR
+  9 C$stm8s_gpio.c$157$1_0$321                                  =  000092 GR
+  9 C$stm8s_gpio.c$167$1_0$323                                  =  000093 GR
+  9 C$stm8s_gpio.c$169$1_0$323                                  =  000094 GR
+  9 C$stm8s_gpio.c$170$1_0$323                                  =  00009E GR
+  9 C$stm8s_gpio.c$180$1_0$325                                  =  00009F GR
+  9 C$stm8s_gpio.c$182$1_0$325                                  =  0000A2 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 4
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  9 C$stm8s_gpio.c$183$1_0$325                                  =  0000A7 GR
+  9 C$stm8s_gpio.c$191$1_0$327                                  =  0000A8 GR
+  9 C$stm8s_gpio.c$193$1_0$327                                  =  0000A8 GR
+  9 C$stm8s_gpio.c$194$1_0$327                                  =  0000A9 GR
+  9 C$stm8s_gpio.c$202$1_0$329                                  =  0000AA GR
+  9 C$stm8s_gpio.c$204$1_0$329                                  =  0000AA GR
+  9 C$stm8s_gpio.c$205$1_0$329                                  =  0000AC GR
+  9 C$stm8s_gpio.c$213$1_0$331                                  =  0000AD GR
+  9 C$stm8s_gpio.c$215$1_0$331                                  =  0000B0 GR
+  9 C$stm8s_gpio.c$216$1_0$331                                  =  0000B9 GR
+  9 C$stm8s_gpio.c$225$1_0$333                                  =  0000BA GR
+  9 C$stm8s_gpio.c$231$1_0$333                                  =  0000C3 GR
+  9 C$stm8s_gpio.c$233$1_0$333                                  =  0000BB GR
+  9 C$stm8s_gpio.c$233$2_0$334                                  =  0000C7 GR
+  9 C$stm8s_gpio.c$236$2_0$335                                  =  0000CC GR
+  9 C$stm8s_gpio.c$238$1_0$333                                  =  0000D0 GR
+  9 C$stm8s_gpio.c$53$0_0$307                                   =  000000 GR
+  9 C$stm8s_gpio.c$55$1_0$307                                   =  000001 GR
+  9 C$stm8s_gpio.c$56$1_0$307                                   =  000003 GR
+  9 C$stm8s_gpio.c$57$1_0$307                                   =  000006 GR
+  9 C$stm8s_gpio.c$58$1_0$307                                   =  000009 GR
+  9 C$stm8s_gpio.c$59$1_0$307                                   =  00000C GR
+  9 C$stm8s_gpio.c$71$1_0$309                                   =  00000D GR
+  9 C$stm8s_gpio.c$81$1_0$309                                   =  00006C GR
+  9 C$stm8s_gpio.c$87$1_0$309                                   =  00002D GR
+  9 C$stm8s_gpio.c$89$2_0$310                                   =  000034 GR
+  9 C$stm8s_gpio.c$91$1_0$309                                   =  000031 GR
+  9 C$stm8s_gpio.c$91$3_0$311                                   =  00003C GR
+  9 C$stm8s_gpio.c$95$3_0$312                                   =  000041 GR
+  9 C$stm8s_gpio.c$98$1_0$309                                   =  000027 GR
+  9 C$stm8s_gpio.c$98$2_0$310                                   =  000044 GR
+  9 G$GPIO_DeInit$0$0                                           =  000000 GR
+  9 G$GPIO_ExternalPullUpConfig$0$0                             =  0000BA GR
+  9 G$GPIO_Init$0$0                                             =  00000D GR
+  9 G$GPIO_ReadInputData$0$0                                    =  0000AA GR
+  9 G$GPIO_ReadInputPin$0$0                                     =  0000AD GR
+  9 G$GPIO_ReadOutputData$0$0                                   =  0000A8 GR
+  9 G$GPIO_Write$0$0                                            =  000088 GR
+  9 G$GPIO_WriteHigh$0$0                                        =  00008A GR
+  9 G$GPIO_WriteLow$0$0                                         =  000093 GR
+  9 G$GPIO_WriteReverse$0$0                                     =  00009F GR
+  9 XG$GPIO_DeInit$0$0                                          =  00000C GR
+  9 XG$GPIO_ReadInputData$0$0                                   =  0000AC GR
+  9 XG$GPIO_ReadInputPin$0$0                                    =  0000B9 GR
+  9 XG$GPIO_ReadOutputData$0$0                                  =  0000A9 GR
+  9 XG$GPIO_Write$0$0                                           =  000089 GR
+  9 XG$GPIO_WriteHigh$0$0                                       =  000092 GR
+  9 XG$GPIO_WriteLow$0$0                                        =  00009E GR
+  9 XG$GPIO_WriteReverse$0$0                                    =  0000A7 GR
+  9 _GPIO_DeInit                                                   000000 GR
+  9 _GPIO_ExternalPullUpConfig                                     0000BA GR
+  9 _GPIO_Init                                                     00000D GR
+  9 _GPIO_ReadInputData                                            0000AA GR
+  9 _GPIO_ReadInputPin                                             0000AD GR
+  9 _GPIO_ReadOutputData                                           0000A8 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 5
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  9 _GPIO_Write                                                    000088 GR
+  9 _GPIO_WriteHigh                                                00008A GR
+  9 _GPIO_WriteLow                                                 000093 GR
+  9 _GPIO_WriteReverse                                             00009F GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 6
+Hexadecimal [24-Bits]
+
+Area Table
+
+   0 _CODE                                      size      0   flags    0
+   1 DATA                                       size      0   flags    0
+   2 INITIALIZED                                size      0   flags    0
+   3 DABS                                       size      0   flags    8
+   4 HOME                                       size      0   flags    0
+   5 GSINIT                                     size      0   flags    0
+   6 GSFINAL                                    size      0   flags    0
+   7 CONST                                      size      0   flags    0
+   8 INITIALIZER                                size      0   flags    0
+   9 CODE                                       size     D4   flags    0
+   A CABS                                       size      0   flags    8
+
