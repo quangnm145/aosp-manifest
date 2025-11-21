@@ -1,0 +1,14 @@
+#
+# Please don't change or add any lines in this file
+# Generated automatically by Cosmic website on 2025-11-20 11:33:46
+#
+FEATURE LXSTM8FSE_202X cosmic 33.1 20-nov-2026 uncounted \
+	HOSTID="d4bed97df995 0c84dc3b7509" SIGN=0CADE02A0E4E
+FEATURE LXSTM8FSE_2020 cosmic 33.1 20-nov-2026 uncounted \
+	HOSTID="d4bed97df995 0c84dc3b7509" SIGN=8489F9DE4EE0
+FEATURE LXSTM8FSE_2019 cosmic 33.1 20-nov-2026 uncounted \
+	HOSTID="d4bed97df995 0c84dc3b7509" SIGN=4EC37E225FBA
+FEATURE LXSTM8FSE_2018 cosmic 33.1 20-nov-2026 uncounted \
+	HOSTID="d4bed97df995 0c84dc3b7509" SIGN=898F6F1E7168
+FEATURE LXSTM8FSE_2017 cosmic 33.1 20-nov-2026 uncounted \
+	HOSTID="d4bed97df995 0c84dc3b7509" SIGN=4BB7898A6B0E
