@@ -19,7 +19,8 @@ sudo pip3 install meson mako jinja2 ply pyyaml dataclasses
 
 ```
 repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r28
-curl -o .repo/local_manifests/manifest_rk3576_rock_4d_qnm.xml -L https://raw.githubusercontent.com/quangnm145/aosp-manifest/refs/heads/rock4d-android-14.0.0_r22/manifest_rk3576_rock_4d_qnm.xml --create-dirs
+# Make sure to replace YOUR_GITHUB_TOKEN with your actual Personal Access Token
+curl -H "Authorization: token YOUR_GITHUB_TOKEN" -o .repo/local_manifests/manifest_rk3576_rock_4d_qnm.xml -L https://raw.githubusercontent.com/quangnm145/aosp-manifest/refs/heads/rock4d-android-14.0.0_r22/manifest_rk3576_rock_4d_qnm.xml --create-dirs
 ```
 
 4. Sync source code:
