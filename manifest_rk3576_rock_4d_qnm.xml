@@ -5,6 +5,6 @@
   <!-- Radxa Rock 4D -->
   <project path="device/rockchip/rk3576_rock_4d_qnm" name="quangnm145/android-devices" remote="github" revision="rock_4d_android14_rk3576" />
 
-  <project path="vendor/quangnm" name="quangnm145/android-vendors" remote="github" revision="rock_4d_android14_rk3576" />
+  <project path="vendor/rockchip/rk3576_rock_4d_qnm" name="quangnm145/android-vendors" remote="github" revision="rock_4d_android14_rk3576" />
 
 </manifest>
