@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote name="github" fetch="ssh://git@github.com/" />
+  <remote name="rk" fetch="https://gitlab.com/rockchip_android14_rk3576"/>
+  <remote name="rk29" fetch="https://gitlab.com/rockchip_android14_rk3576"/>
 
   <!-- Radxa Rock 4D -->
   <project path="device/rockchip/rk3576_rock_4d_qnm" name="quangnm145/android-devices" remote="github" revision="rock_4d_android14_rk3576" />
@@ -8,4 +10,6 @@
   <project path="vendor/rockchip/rk3576_rock_4d_qnm" name="quangnm145/android-vendors" remote="github" revision="rock_4d_android14_rk3576" />
 
   <project path="u-boot" name="quangnm145/u-boot" remote="github" revision="rk3576_rock_4d" />
+
+  <project name="rk/rkbin" path="rkbin" remote="rk29" revision="0f8ac860f0479da56a1decae207ddc99e289f2e2" upstream="refs/tags/android-14.0-mid-rkr6" dest-branch="refs/tags/android-14.0-mid-rkr6"/>
 </manifest>
